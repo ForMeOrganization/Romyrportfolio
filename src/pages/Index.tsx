@@ -1,19 +1,27 @@
 import { Trophy, Award, GraduationCap, ImageIcon, Github, Linkedin } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import manobelaImage from "@/assets/1770454143632.jpg";
+import pagbutlakImage from "@/assets/pagbutlak.png";
+import hackathonImage from "@/assets/hackathon.jpg";
+import ctfImage from "@/assets/ctf.jpg";
+import cert1Image from "@/assets/cert1.jpg";
+import cert2Image from "@/assets/cert2.jpg";
+import cert3Image from "@/assets/cert3.jpg";
+import authorImage from "@/assets/image.jpg";
 
 const projects = [
   {
     title: "Manobela",
     description: "A driver monitoring mobile app using computer vision",
     tags: ["Computer Vision", "React", "TypeScript", "WebSocket", "Mobile Development", "FastAPI"],
-    image: "/src/assets/1770454143632.jpg",
+    image: manobelaImage,
     href: "https://github.com/Romyr05/manobela",
   },
   {
     title: "Pagbutlak Website",
-    description: "An ETL pipeline dashboard for monitoring data transformations.",
+    description: "An official website for the student and community publication of CAS in UP Visayas, Pagbutlak.",
     tags: ["Typescript", "TailwindCSS", "React", "Next.js"],
-    image: "src/assets/pagbutlak.png",
+    image: pagbutlakImage,
     href: "https://github.com/pagbutlakupv/website",
   },
 ];
@@ -24,14 +32,14 @@ const achievements = [
     description: "Champion in a regional hackathon with an AI-powered monitoring application.",
     badge: "Champion",
     meta: "Hackathon • 2026",
-    image: "/src/assets/hackathon.jpg",
+    image: hackathonImage,
   },
   {
     title: "CyberSec CTF",
     description: "Secured 1st runner-up in a regional cybersecurity capture-the-flag competition.",
     badge: "1st Runner-Up",
     meta: "CTF • 2025",
-    image: "/src/assets/ctf.jpg",
+    image: ctfImage,
   },
   {
     title: "Dev Summit Hack",
@@ -49,7 +57,7 @@ const certifications = [
     period: "2026",
     description: "Learned and Applied Intermediate Git Concepts",
     icon: Award,
-    image: "src/assets/cert1.jpg",
+    image: cert1Image,
   },
   {
     title: "Intermediate Python",
@@ -58,7 +66,7 @@ const certifications = [
     period: "2026",
     description: "Learned and Applied Intermediate Python Concepts",
     icon: Award,
-    image: "src/assets/cert2.jpg",
+    image: cert2Image,
   },
   {
     title: "Intermediate SQL",
@@ -67,7 +75,7 @@ const certifications = [
     period: "2026",
     description: "Learned and Applied Intermediate SQL Concepts",
     icon: Award,
-    image: "src/assets/cert3.jpg",
+    image: cert3Image,
   },
 ];
 
@@ -83,7 +91,7 @@ const linkedinProfileUrl = "https://www.linkedin.com/in/romyr-lopez-65671229b/";
 const AuthorLogoPlaceholder = () => (
   <div className="flex items-center gap-5 rounded-2xl">
     <div className="flex h-24 w-24 flex-none items-center justify-center overflow-hidden rounded-2xl border border-border bg-[radial-gradient(circle_at_top,_hsl(var(--primary)/0.3),_transparent_58%),linear-gradient(135deg,_hsl(var(--secondary)),_hsl(var(--card)))]">
-        <img src={"src/assets/image.jpg"} alt="John Romyr Lopez" className="h-full w-full object-cover" />
+      <img src={authorImage} alt="John Romyr Lopez" className="h-full w-full object-cover" />
     </div>
     <div className="min-w-0">
       <p className="text-xl font-semibold tracking-tight text-foreground">John Romyr Lopez</p>
