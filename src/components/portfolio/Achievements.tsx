@@ -9,7 +9,6 @@ const achievements = [
     badge: "Champion",
     category: "Hackathon",
     year: "2026",
-    badgeColor: "badge-champion",
   },
   {
     title: "CyberSec CTF",
@@ -17,7 +16,6 @@ const achievements = [
     badge: "1st Runner-Up",
     category: "CTF",
     year: "2025",
-    badgeColor: "badge-runner",
   },
   {
     title: "Dev Summit Hack",
@@ -25,7 +23,6 @@ const achievements = [
     badge: "Participant",
     category: "Hackathon",
     year: "2025",
-    badgeColor: "badge-participant",
   },
 ];
 
