@@ -46,7 +46,7 @@ const Achievements = () => {
               <h3 className="font-semibold text-sm mb-0.5">{item.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed mb-2">{item.description}</p>
               <div className="flex items-center gap-2 text-xs">
-                <span className={`px-2 py-0.5 rounded-md bg-[hsl(var(--${item.badgeColor}))/0.15] text-[hsl(var(--${item.badgeColor}))] font-medium`}>
+                <span className="px-2 py-0.5 rounded-md bg-primary/15 text-primary font-medium">
                   {item.badge}
                 </span>
                 <span className="text-muted-foreground">•</span>
