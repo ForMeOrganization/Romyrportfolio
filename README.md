@@ -4,21 +4,13 @@ Live app: http://portfolioromyr.io/
 
 ## Overview
 
-This project is a portfolio built with React, TypeScript, Vite, Tailwind CSS, and shadcn-style UI utilities.
+This is a portfolio built with React, TypeScript, Vite, Tailwind CSS, and shadcn-style UI utilities.
 
-- A personal profile header with photo, name, and social links
-- Recent projects with clickable screenshots
+SHOWCASING MY
+
+- Recent projects 
 - Recent achievements
 - Certifications and course completions
-
-## Features
-
-- Responsive one-page portfolio layout
-- Clickable project images that link to GitHub repositories
-- GitHub and LinkedIn profile links in the header
-- Achievement cards with optional images
-- Certification cards with supporting descriptions
-- Tailwind-based styling and custom theme tokens
 
 ## Tech Stack
 
