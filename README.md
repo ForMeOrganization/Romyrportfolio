@@ -1,45 +1,16 @@
 # Romyr's Portfolio 
 
-Live app: http://portfolioromyr.io/
+Live app: [romyr](https://romyr.vercel.app/)
 
 ## Overview
 
-This is a portfolio built with React, TypeScript, Vite, Tailwind CSS, and shadcn-style UI utilities.
+Im romyr and this is my portfolio, hope you like it!
 
-SHOWCASING MY
+## SHOWCASING MY
 
 - Recent projects 
 - Recent achievements
 - Certifications and course completions
-
-## Tech Stack
-
-- React 18
-- TypeScript
-- Vite
-- Tailwind CSS
-- React Router
-- TanStack Query
-- Lucide React
-
-## Project Structure
-
-```text
-shining-achievements-hub/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── hooks/
-│   ├── lib/
-│   ├── pages/
-│   │   └── Index.tsx
-│   ├── App.tsx
-│   ├── index.css
-│   └── main.tsx
-├── index.html
-├── package.json
-└── README.md
-```
 
 ## Getting Started
 
@@ -58,5 +29,5 @@ npm run dev
 
 ## Personal Links
 
-- GitHub: https://github.com/Romyr05
-- LinkedIn: https://www.linkedin.com/in/romyr-lopez-65671229b/
+- GitHub: [Github](https://github.com/Romyr05)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/john-romyr-lopez-65671229b/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B2z7hsbIsTSu1aKHOSSBypQ%3D%3D)
