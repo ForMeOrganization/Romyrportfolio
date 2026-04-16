@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:wght@500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,53 +6,53 @@
 
 @layer base {
   :root {
-    --background: 40 6% 12%;
-    --foreground: 40 30% 75%;
+    --background: 45 24% 96%;
+    --foreground: 210 18% 15%;
 
-    --card: 40 6% 15%;
-    --card-foreground: 40 30% 75%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 18% 15%;
 
-    --popover: 40 6% 15%;
-    --popover-foreground: 40 30% 75%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 18% 15%;
 
-    --primary: 40 35% 68%;
-    --primary-foreground: 40 6% 12%;
+    --primary: 205 68% 31%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 40 6% 18%;
-    --secondary-foreground: 40 30% 75%;
+    --secondary: 40 30% 92%;
+    --secondary-foreground: 210 18% 15%;
 
-    --muted: 40 5% 20%;
-    --muted-foreground: 40 15% 50%;
+    --muted: 45 20% 92%;
+    --muted-foreground: 210 10% 40%;
 
     --accent: 40 35% 68%;
-    --accent-foreground: 40 6% 12%;
+    --accent-foreground: 210 18% 15%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 40 8% 22%;
-    --input: 40 8% 22%;
-    --ring: 40 35% 68%;
+    --border: 40 14% 82%;
+    --input: 40 14% 82%;
+    --ring: 205 68% 31%;
 
     --radius: 0.75rem;
 
-    --heading: 40 40% 82%;
-    --link: 40 35% 68%;
-    --link-hover: 40 45% 78%;
-    --tag-bg: 40 8% 18%;
-    --tag-text: 40 20% 60%;
+    --heading: 210 18% 12%;
+    --link: 205 68% 31%;
+    --link-hover: 205 78% 24%;
+    --tag-bg: 45 20% 92%;
+    --tag-text: 210 12% 35%;
     --badge-champion: 42 80% 55%;
     --badge-runner: 40 20% 55%;
     --badge-participant: 40 10% 45%;
 
-    --sidebar-background: 40 6% 10%;
-    --sidebar-foreground: 40 30% 75%;
-    --sidebar-primary: 40 35% 68%;
-    --sidebar-primary-foreground: 40 6% 12%;
-    --sidebar-accent: 40 6% 18%;
-    --sidebar-accent-foreground: 40 30% 75%;
-    --sidebar-border: 40 8% 22%;
-    --sidebar-ring: 40 35% 68%;
+    --sidebar-background: 45 24% 96%;
+    --sidebar-foreground: 210 18% 15%;
+    --sidebar-primary: 205 68% 31%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 45 20% 92%;
+    --sidebar-accent-foreground: 210 18% 15%;
+    --sidebar-border: 40 14% 82%;
+    --sidebar-ring: 205 68% 31%;
   }
 }
 
@@ -61,15 +61,23 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    background-image:
+      radial-gradient(circle at top left, hsl(var(--primary) / 0.08), transparent 26%),
+      linear-gradient(to bottom, hsl(var(--background)), hsl(45 22% 94%));
   }
 
   h1, h2, h3, h4, h5, h6 {
     color: hsl(var(--heading));
+    font-family: 'Source Serif 4', Georgia, serif;
     font-weight: 600;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
   }
 
   a {
@@ -79,6 +87,10 @@
 
   a:hover {
     color: hsl(var(--link-hover));
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.18);
   }
 }
 
@@ -112,6 +124,58 @@
 
 .animate-fade-in {
   animation: fade-in 500ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes skill-cloud-marquee {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.skill-cloud {
+  overflow: hidden;
+  width: 100%;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.skill-cloud__track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 0.65rem;
+  will-change: transform;
+  animation: skill-cloud-marquee 22s linear infinite;
+}
+
+.skill-cloud__item,
+.skill-cloud__more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid hsl(var(--border) / 0.8);
+  background: linear-gradient(180deg, hsl(var(--card)), hsl(var(--secondary) / 0.65));
+  color: hsl(var(--muted-foreground));
+  border-radius: 9999px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.skill-cloud__more {
+  background: transparent;
+  border-style: dashed;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-cloud__track {
+    animation: none;
+  }
 }
 
 .stagger-1 { animation-delay: 80ms; }
