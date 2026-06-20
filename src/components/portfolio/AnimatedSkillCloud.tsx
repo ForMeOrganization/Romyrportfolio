@@ -6,8 +6,8 @@ const AnimatedSkillCloud = ({ skills }: AnimatedSkillCloudProps) => {
   const loopedSkills = [...skills, ...skills,];
 
   return (
-    <div className="skill-cloud" aria-label="Skills marquee">
-      <div className="skill-cloud__track">
+    <div className="skill-cloud" role="img" aria-label={`Skills: ${skills.join(", ")}`}>
+      <div className="skill-cloud__track" aria-hidden="true">
         {loopedSkills.map((skill, index) => (
           <span
             key={`${skill}-${index}`}
