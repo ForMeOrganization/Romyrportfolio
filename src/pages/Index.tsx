@@ -138,6 +138,32 @@ const Index = () => {
         </div>
       </section>
 
+
+
+      <section ref={achievementsRef} className="pt-12 opacity-0">
+        <div className="mb-5 flex items-baseline justify-between gap-3 border-b border-border/70 pb-3">
+          <h2 className="text-2xl font-semibold tracking-tight text-foreground">Recent achievements</h2>
+          <Link to="/achievements" className="inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground">
+            See all achievements
+            <ArrowUpRight size={14} />
+          </Link>
+        </div>
+
+        <div className="space-y-4">
+          {achievements.slice(0, 4).map((item, index) => (
+            <article
+              key={item.title}
+              className={`stagger-${index + 1} rounded-2xl border border-border/80 bg-card/72 p-5`}
+            >
+              <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
+              <p className="mt-2 text-sm leading-7 text-muted-foreground">{item.description}</p>
+              <p className="mt-3 text-sm text-foreground/70">{item.meta}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+
       <section ref={techStackRef} className="pt-12 opacity-0">
         <div className="mb-5 border-b border-border/70 pb-3">
           <h2 className="text-2xl font-semibold tracking-tight text-foreground">Tech stack</h2>
@@ -160,29 +186,6 @@ const Index = () => {
                   </span>
                 ))}
               </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section ref={achievementsRef} className="pt-12 opacity-0">
-        <div className="mb-5 flex items-baseline justify-between gap-3 border-b border-border/70 pb-3">
-          <h2 className="text-2xl font-semibold tracking-tight text-foreground">Recent achievements</h2>
-          <Link to="/achievements" className="inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground">
-            See all achievements
-            <ArrowUpRight size={14} />
-          </Link>
-        </div>
-
-        <div className="space-y-4">
-          {achievements.map((item, index) => (
-            <article
-              key={item.title}
-              className={`stagger-${index + 1} rounded-2xl border border-border/80 bg-card/72 p-5`}
-            >
-              <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
-              <p className="mt-2 text-sm leading-7 text-muted-foreground">{item.description}</p>
-              <p className="mt-3 text-sm text-foreground/70">{item.meta}</p>
             </article>
           ))}
         </div>
