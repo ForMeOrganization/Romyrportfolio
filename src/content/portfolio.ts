@@ -1,4 +1,11 @@
-
+import manobelaImg from "@/assets/manobela.jpg";
+import hermesImg from "@/assets/hermes.gif";
+import pagbutlakImg from "@/assets/pagbutlak.png";
+import tracktechImg from "@/assets/hackathon.jpg";
+import hack4govImg from "@/assets/ctf.jpg";
+import gitCertImg from "@/assets/cert1.jpg";
+import pythonCertImg from "@/assets/cert2.jpg";
+import sqlCertImg from "@/assets/cert3.jpg";
 
 export const profile = {
   shortName: "Romyr",
@@ -101,6 +108,7 @@ export const projects = [
     href: "https://github.com/Romyr05/manobela",
     stack: ["React", "TypeScript", "FastAPI", "Computer Vision","Tailwind CSS"],
     period: "2026",
+    image: manobelaImg,
   },
   {
     title: "Project Hermes",
@@ -108,6 +116,7 @@ export const projects = [
     href: "https://github.com/Romyr05/project-hermes",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "React"],
     period: "2026",
+    image: hermesImg,
   },
   {
     title: "Pagbutlak Website",
@@ -115,6 +124,7 @@ export const projects = [
     href: "https://github.com/pagbutlakupv/website",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
     period: "2025",
+    image: pagbutlakImg,
   },
   {
     title: "Scan a Delegate",
@@ -122,6 +132,7 @@ export const projects = [
     href: "https://github.com/Romyr05/vAppNew/",
     stack: ["HTML", "JavaScript", "Solidity","Docker"],
     period: "2025",
+    image: undefined,
   }
 ];
 
@@ -130,31 +141,37 @@ export const achievements = [
     title: "Quantum Computing CTF",
     description: "Champion in the Philippines' first quantum-themed CTF competition ",
     meta: "Champion • Hackathon • 2026",
+    image: undefined,
   },
   {
     title: "CPU TrackTech",
     description: "Champion in a regional hackathon with an AI-powered monitoring application.",
     meta: "Champion • Hackathon • 2026",
+    image: tracktechImg,
   },
   {
     title: "CyberSec CTF",
     description: "Secured 1st runner-up in a regional cybersecurity capture-the-flag competition.",
     meta: "1st Runner-Up • CTF • 2025",
+    image: hack4govImg,
   },
   {
     title: "KomsaiHack 2026",
     description: "Top 13 in a regional hackathon contest",
     meta: "Participant • Hackathon • 2026",
+    image: undefined,
   },
   {
     title: "Dev Summit Hack",
     description: "Participated in a Regional Hackathon and built a decentralized voting system using blockchain technology.",
     meta: "Participant • Hackathon • 2025",
+    image: undefined,
   },
   {
     title: "National Olympiad in Informatics (NOI.PH)",
     description: "Participated in the National Olympiad in Informatics Philippines.",
     meta: "Participant • Olympiad • 2024",
+    image: undefined,
   },
 ];
 
@@ -174,27 +191,32 @@ export const education = [
 export const certifications = [
   {
     title: "CS50 Python",
-    meta: "Certification • Harvard • 2026"
+    meta: "Certification • Harvard • 2026",
+    image: undefined,
   },
   {
     title: "Associate Data Engineer in SQL",
-    meta: "Certification • DataCamp • 2026"
+    meta: "Certification • DataCamp • 2026",
+    image: undefined,
   },
   {
     title: "Intermediate Git",
     meta: "Certification • DataCamp • 2026",
+    image: gitCertImg,
   },
   {
     title: "Intermediate Python",
     meta: "Certification • DataCamp • 2026",
+    image: pythonCertImg,
   },
   {
     title: "Intermediate SQL",
     meta: "Certification • DataCamp • 2026",
+    image: sqlCertImg,
   },
   {
     title: "Prompt Engineer Certification",
-    meta: "Certification • Cirrolytix • 2024"
-  }
-
+    meta: "Certification • Cirrolytix • 2024",
+    image: undefined,
+  },
 ];
