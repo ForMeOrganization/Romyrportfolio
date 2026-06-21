@@ -1,22 +1,32 @@
-
+import manobelaImg from "@/assets/manobela.jpg";
+import hermesImg from "@/assets/hermes.gif";
+import pagbutlakImg from "@/assets/pagbutlak.png";
+import tracktechImg from "@/assets/hackathon.jpg";
+import hack4govImg from "@/assets/ctf.jpg";
+import gitCertImg from "@/assets/cert1.jpg";
+import pythonCertImg from "@/assets/cert2.jpg";
+import sqlCertImg from "@/assets/cert3.jpg";
+import quantumImg from "@/assets/QuantumComputing_CTF.jpg"
+import dataengImg from "@/assets/cert_dataEng.jpg"
+import cs50P_Img from "@/assets/CS50P_cert.png"
+import komsai_tracktech from "@/assets/komsai_tracktech.jpg"
+import gameflix_img from "@/assets/gameflix.png";
+import schedulizer from "@/assets/schedulizer_img.png"
 
 export const profile = {
   shortName: "Romyr",
   fullName: "John Romyr Lopez",
   role: "Computer Science Student @ UP Visayas",
   intro:
-    "Hi... I'm a Computer Science student with knowledge  on full-stack web development, a little bit of data science and data engineering and building useful software with users in mind.",
+    "Hi, I'm a Computer Science student with experience in full-stack web development and a growing focus on data science and data engineering. I enjoy building useful software with users in mind.",
   summary:
-    "I enjoy turning my ideas into products, especially if i need them. Lately, I have been exploring and building projects in Web development that machine learning while exploring Data Science and Data Engineering ",
+    "I like turning ideas into products, especially ones I'd actually use. Lately I've been building web and machine learning projects while diving deeper into data science and data engineering.",
   location: "Iloilo, Philippines",
-  email: "romyrjohnlopez@gmail.com",
+  email: "romyrlopez123@gmail.com",
   links: {
     github: "https://github.com/Romyr05",
-    linkedin: "https://www.linkedin.com/in/romyr-lopez-65671229b/",
+    linkedin: "https://www.linkedin.com/in/romyr-lopez",
     map: "https://maps.google.com/?q=Iloilo,+Philippines",
-    cv: "#/cv",
-    projects: "#/projects",
-    achievements: "#/achievements",
   },
 };
 
@@ -43,7 +53,7 @@ export const techTags = [
   "FastAPI",
   "Computer Vision",
   "Machine Learning",
-  "Python", "SQL", "C", "Java", "HTML", "CSS", "JavaScript"
+  "SQL", "C", "Java", "HTML", "CSS", "JavaScript"
 ];
 
 export const techStackGroups = [
@@ -65,27 +75,11 @@ export const techStackGroups = [
 export const experience = [
   {
     year: "2026",
-    role: "Data Engineering Scholar",
-    company: "Data Engineering Pilipinas • DataCamp",
+    role: "AI / Data Science Intern",
+    company: "Worldwide Shipping and Logistics (WSL)",
     description:
-      "Selected scholar pursuing Data Science and Data engineering tracks in SQL and Python. Building hands-on skills in data ",
-    period: "Feb 2026 - Present",
-  },
-  {
-    year: "2026",
-    role: "TrackTech Hackathon, Contestant ",
-    company: "TrackTech",
-    description:
-      "Developed a real-time driver monitoring **mobile app** using React Native and FastAPI, integrating computer vision to detect drowsiness and improve road safety.",
-    period: "Feb 2026",
-  },
-    {
-    year: "2026",
-    role: "UP Data Society Member",
-    company: "University of the Philippines",
-    description:
-      "A academic organization composed of UP students, that focuses on Data science",
-    period: "Feb 2026 - Present",
+      "Designing an AI marketing agent and a behavioral lead-scoring engine with UTM-based campaign attribution for the company's B2B logistics platform.",
+    period: "Jun 2026 - Present",
   },
   {
     year: "2026",
@@ -96,29 +90,21 @@ export const experience = [
     period: "Feb 2026 - Present",
   },
   {
-    year: "2025",
-    role: "Hack4Gov CTF",
-    company: "DICT",
+    year: "2026",
+    role: "UP Data Society Member",
+    company: "University of the Philippines",
     description:
-      "First runner-up in team category in a nationwide cybersecurity competition in the Philippines, organized by the Department of Information and Communications Technology (DICT)",
-    period: "Oct 2025",
+      "Member of an academic organization of UP students focused on data science.",
+    period: "Feb 2026 - Present",
   },
   {
-    year: "2024",
-    role: "Prompt Seminar Student",
-    company: "CirroLytix, Doc Ligot",
+    year: "2026",
+    role: "Data Engineering Scholar",
+    company: "Data Engineering Pilipinas • DataCamp",
     description:
-      "Seminar for GenAI, Prompt Engineering for ChatGPT, Prompt Engineering for Midjourney, learned the Proper way of prompting and experienced AI tools",
-    period: "July 2024",
+      "Selected scholar pursuing Data Science and Data Engineering tracks in SQL and Python, building hands-on skills with real-world data.",
+    period: "Feb 2026 - Present",
   },
-  {
-    year: "2024",
-    role: "Participant",
-    company: "NOI PH",
-    description:
-      "Participated in a National Olympiad in Informatics Philippines in 2024",
-    period: "July 2024",
-  }
 ];
 
 export const projects = [
@@ -128,50 +114,86 @@ export const projects = [
     href: "https://github.com/Romyr05/manobela",
     stack: ["React", "TypeScript", "FastAPI", "Computer Vision","Tailwind CSS"],
     period: "2026",
+    image: manobelaImg,
   },
   {
     title: "Project Hermes",
     description: "A DRRM control center for incident reporting and information dissemination through AI-powered chatbots ",
     href: "https://github.com/Romyr05/project-hermes",
-    stack: ["Next.js","Typescript","tailwind CSS", "PostgressSQL", "React"],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "React"],
     period: "2026",
+    image: hermesImg,
   },
   {
     title: "Pagbutlak Website",
     description: "The official website for the student and community publication of CAS in UP Visayas.",
     href: "https://github.com/pagbutlakupv/website",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS","supabase"],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
     period: "2025",
+    image: pagbutlakImg,
   },
   {
+    title: "Gameflix",
+    description: "A social game recommendation platform with an ML-based recommender (content-based)",
+    href: "https://github.com/Romyr05/126-final-project",
+    stack: ["Next.js", "TypeScript", "FastAPI", "PostgreSQL","Python","Machine Learning"],
+    period: "2026",
+    image: gameflix_img,
+  },
+  {
+    title: "Schedulizer",
+    description: "A command-line tool that turns a class schedule screenshot into a polished phone wallpaper using OCR.",
+    href: "https://github.com/Romyr05/schedulizer",
+    stack: ["Python", "Tesseract OCR", "Pillow"],
+    period: "2026",
+    image: schedulizer,
+  }
+  ,{
     title: "Scan a Delegate",
     description: "A decentralized application (dApp) for secure and transparent voting, utilizing blockchain technology. Specifically made for Comelec",
     href: "https://github.com/Romyr05/vAppNew/",
     stack: ["HTML", "JavaScript", "Solidity","Docker"],
     period: "2025",
-  }
+    image: undefined,
+  },
 ];
 
 export const achievements = [
   {
+    title: "Quantum Computing CTF",
+    description: "Champion in the Philippines' first quantum-themed CTF competition ",
+    meta: "Champion • Hackathon • 2026",
+    image: quantumImg
+  },
+  {
     title: "CPU TrackTech",
     description: "Champion in a regional hackathon with an AI-powered monitoring application.",
     meta: "Champion • Hackathon • 2026",
+    image: tracktechImg,
   },
   {
     title: "CyberSec CTF",
     description: "Secured 1st runner-up in a regional cybersecurity capture-the-flag competition.",
     meta: "1st Runner-Up • CTF • 2025",
+    image: hack4govImg,
   },
   {
     title: "KomsaiHack 2026",
     description: "Top 13 in a regional hackathon contest",
     meta: "Participant • Hackathon • 2026",
+    image: komsai_tracktech,
   },
   {
     title: "Dev Summit Hack",
     description: "Participated in a Regional Hackathon and built a decentralized voting system using blockchain technology.",
     meta: "Participant • Hackathon • 2025",
+    image: undefined,
+  },
+  {
+    title: "National Olympiad in Informatics (NOI.PH)",
+    description: "Participated in the National Olympiad in Informatics Philippines.",
+    meta: "Participant • Olympiad • 2024",
+    image: undefined,
   },
 ];
 
@@ -191,27 +213,32 @@ export const education = [
 export const certifications = [
   {
     title: "CS50 Python",
-    meta: "Certification • Harvard • 2026"
+    meta: "Certification • Harvard • 2026",
+    image: cs50P_Img,
   },
   {
     title: "Associate Data Engineer in SQL",
-    meta: "Certification • DataCamp • 2026"
+    meta: "Certification • DataCamp • 2026",
+    image: dataengImg,
   },
   {
     title: "Intermediate Git",
     meta: "Certification • DataCamp • 2026",
+    image: gitCertImg,
   },
   {
     title: "Intermediate Python",
     meta: "Certification • DataCamp • 2026",
+    image: pythonCertImg,
   },
   {
     title: "Intermediate SQL",
     meta: "Certification • DataCamp • 2026",
+    image: sqlCertImg,
   },
   {
     title: "Prompt Engineer Certification",
-    meta: "Certification • Cirrolytix • 2024"
-  }
-
+    meta: "Certification • Cirrolytix • 2024",
+    image: undefined,
+  },
 ];

@@ -1,24 +1,14 @@
-import { ArrowUpRight, Download } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import SiteLayout from "@/components/portfolio/SiteLayout";
 import { certifications, education, experience, profile, techStackGroups, Focus } from "@/content/portfolio";
 
 const CV = () => (
   <SiteLayout>
     <section className="border-b border-border/70 pb-8">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-        <div>
-          <p className="text-sm uppercase tracking-[0.22em] text-muted-foreground">CV</p>
-          <h1 className="mt-3 text-4xl font-semibold text-foreground sm:text-5xl">{profile.fullName}</h1>
-          <p className="mt-4 max-w-2xl text-[1.02rem] leading-8 text-foreground/82">{profile.role}</p>
-        </div>
-
-        <a
-          href={`mailto:${profile.email}`}
-          className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-card px-4 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
-        >
-          <Download size={16} />
-          Request CV copy
-        </a>
+      <div>
+        <p className="text-sm uppercase tracking-[0.22em] text-muted-foreground">CV</p>
+        <h1 className="mt-3 text-4xl font-semibold text-foreground sm:text-5xl">{profile.fullName}</h1>
+        <p className="mt-4 max-w-2xl text-[1.02rem] leading-8 text-foreground/82">{profile.role}</p>
       </div>
     </section>
 

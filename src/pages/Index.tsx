@@ -28,6 +28,7 @@ const Index = () => {
   const experienceRef = useScrollReveal();
   const techStackRef = useScrollReveal();
   const achievementsRef = useScrollReveal();
+  const certificationsRef = useScrollReveal();
   const educationRef = useScrollReveal();
 
   return (
@@ -92,18 +93,27 @@ const Index = () => {
           {projects.slice(0, 4).map((project, index) => (
             <article
               key={project.title}
-              className={`stagger-${index + 1} min-w-[280px] flex-1 rounded-2xl border border-border/80 bg-card/72 p-5 transition-colors hover:border-foreground/20 md:basis-[calc(50%-0.5rem)]`}
+              className={`stagger-${index + 1} group min-w-[280px] flex-1 overflow-hidden rounded-2xl border border-border/80 bg-card/72 transition-colors hover:border-foreground/20 md:basis-[calc(50%-0.5rem)]`}
             >
-              <a
-                href={project.href}
-                target="_blank"
-                rel="noreferrer"
-                className="group inline-flex items-center gap-2 text-lg font-semibold text-foreground"
-              >
-                <span>{project.title}</span>
-                <ArrowUpRight size={16} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              <a href={project.href} target="_blank" rel="noreferrer" className="block">
+                {project.image && (
+                  <div className="aspect-video overflow-hidden border-b border-border/70 bg-muted">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                )}
+                <div className="p-5">
+                  <span className="inline-flex items-center gap-2 text-lg font-semibold text-foreground">
+                    {project.title}
+                    <ArrowUpRight size={16} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                  </span>
+                  <p className="mt-2 max-w-2xl text-sm leading-7 text-muted-foreground">{project.description}</p>
+                </div>
               </a>
-              <p className="mt-2 max-w-2xl text-sm leading-7 text-muted-foreground">{project.description}</p>
             </article>
           ))}
         </div>
@@ -138,6 +148,44 @@ const Index = () => {
         </div>
       </section>
 
+
+
+      <section ref={achievementsRef} className="pt-12 opacity-0">
+        <div className="mb-5 flex items-baseline justify-between gap-3 border-b border-border/70 pb-3">
+          <h2 className="text-2xl font-semibold tracking-tight text-foreground">Recent achievements</h2>
+          <Link to="/achievements" className="inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground">
+            See all achievements
+            <ArrowUpRight size={14} />
+          </Link>
+        </div>
+
+        <div className="flex flex-col gap-8">
+          {achievements.slice(0, 4).map((item, index) => (
+            <article
+              key={item.title}
+              className={`stagger-${index + 1} flex flex-col gap-4 rounded-2xl border border-border/80 bg-card/72 p-5 transition-colors hover:border-foreground/20 sm:flex-row sm:items-start sm:gap-6`}
+            >
+              {item.image && (
+                <div className="aspect-video w-full overflow-hidden rounded-xl border border-border/70 bg-muted sm:w-44 sm:flex-none">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              )}
+              <div className="min-w-0 flex-1">
+                <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
+                <p className="mt-1 text-sm leading-7 text-muted-foreground">{item.description}</p>
+                <p className="mt-2 text-sm text-muted-foreground/70">{item.meta}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+
       <section ref={techStackRef} className="pt-12 opacity-0">
         <div className="mb-5 border-b border-border/70 pb-3">
           <h2 className="text-2xl font-semibold tracking-tight text-foreground">Tech stack</h2>
@@ -165,24 +213,31 @@ const Index = () => {
         </div>
       </section>
 
-      <section ref={achievementsRef} className="pt-12 opacity-0">
-        <div className="mb-5 flex items-baseline justify-between gap-3 border-b border-border/70 pb-3">
-          <h2 className="text-2xl font-semibold tracking-tight text-foreground">Recent achievements</h2>
-          <Link to="/achievements" className="inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground">
-            See all achievements
-            <ArrowUpRight size={14} />
-          </Link>
+      <section ref={certificationsRef} className="pt-12 opacity-0">
+        <div className="mb-5 border-b border-border/70 pb-3">
+          <h2 className="text-2xl font-semibold tracking-tight text-foreground">Certifications</h2>
         </div>
 
-        <div className="space-y-4">
-          {achievements.map((item, index) => (
+        <div className="flex flex-wrap gap-4">
+          {certifications.map((item, index) => (
             <article
               key={item.title}
-              className={`stagger-${index + 1} rounded-2xl border border-border/80 bg-card/72 p-5`}
+              className={`stagger-${index + 1} group min-w-[280px] flex-1 overflow-hidden rounded-2xl border border-border/80 bg-card/72 md:basis-[calc(50%-0.5rem)]`}
             >
-              <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
-              <p className="mt-2 text-sm leading-7 text-muted-foreground">{item.description}</p>
-              <p className="mt-3 text-sm text-foreground/70">{item.meta}</p>
+              {item.image && (
+                <div className="aspect-video overflow-hidden border-b border-border/70 bg-muted">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+              )}
+              <div className="p-5">
+                <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
+                <p className="mt-3 text-sm text-foreground/70">{item.meta}</p>
+              </div>
             </article>
           ))}
         </div>
@@ -198,7 +253,7 @@ const Index = () => {
         </div>
 
         <div className="space-y-4">
-          {[...education, ...certifications].map((item, index) => (
+          {education.map((item, index) => (
             <article key={item.title} className={`stagger-${index + 1} rounded-2xl border border-border/80 bg-card/72 p-5`}>
               <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
               <p className="mt-2 text-sm leading-7 text-muted-foreground">{item.meta}</p>

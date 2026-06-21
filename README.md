@@ -1,14 +1,14 @@
-# Romyr's Portfolio 
+# Romyr's Portfolio
 
-Live app: [romyr](https://romyr.vercel.app/)
+Live app: [romyr.vercel.app](https://romyr.vercel.app/)
 
 ## Overview
 
-Im romyr and this is my portfolio, hope you like it!
+I'm Romyr, and this is my portfolio — hope you like it!
 
-## SHOWCASING MY
+## What it showcases
 
-- Recent projects 
+- Recent projects
 - Recent achievements
 - Certifications and course completions
 
@@ -26,8 +26,7 @@ npm install
 npm run dev
 ```
 
-
 ## Personal Links
 
-- GitHub: [Github](https://github.com/Romyr05)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/john-romyr-lopez-65671229b/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B2z7hsbIsTSu1aKHOSSBypQ%3D%3D)
+- GitHub: [Romyr05](https://github.com/Romyr05)
+- LinkedIn: [romyr-lopez](https://www.linkedin.com/in/romyr-lopez)
