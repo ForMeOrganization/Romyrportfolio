@@ -6,6 +6,12 @@ import hack4govImg from "@/assets/ctf.jpg";
 import gitCertImg from "@/assets/cert1.jpg";
 import pythonCertImg from "@/assets/cert2.jpg";
 import sqlCertImg from "@/assets/cert3.jpg";
+import quantumImg from "@/assets/QuantumComputing_CTF.jpg"
+import dataengImg from "@/assets/cert_dataEng.jpg"
+import cs50P_Img from "@/assets/CS50P_cert.png"
+import komsai_tracktech from "@/assets/komsai_tracktech.jpg"
+import gameflix_img from "@/assets/gameflix.png";
+import schedulizer from "@/assets/schedulizer_img.png"
 
 export const profile = {
   shortName: "Romyr",
@@ -127,13 +133,29 @@ export const projects = [
     image: pagbutlakImg,
   },
   {
+    title: "Gameflix",
+    description: "A social game recommendation platform with an ML-based recommender (content-based)",
+    href: "https://github.com/Romyr05/126-final-project",
+    stack: ["Next.js", "TypeScript", "FastAPI", "PostgreSQL","Python","Machine Learning"],
+    period: "2026",
+    image: gameflix_img,
+  },
+  {
+    title: "Schedulizer",
+    description: "A command-line tool that turns a class schedule screenshot into a polished phone wallpaper using OCR.",
+    href: "https://github.com/Romyr05/schedulizer",
+    stack: ["Python", "Tesseract OCR", "Pillow"],
+    period: "2026",
+    image: schedulizer,
+  }
+  ,{
     title: "Scan a Delegate",
     description: "A decentralized application (dApp) for secure and transparent voting, utilizing blockchain technology. Specifically made for Comelec",
     href: "https://github.com/Romyr05/vAppNew/",
     stack: ["HTML", "JavaScript", "Solidity","Docker"],
     period: "2025",
     image: undefined,
-  }
+  },
 ];
 
 export const achievements = [
@@ -141,7 +163,7 @@ export const achievements = [
     title: "Quantum Computing CTF",
     description: "Champion in the Philippines' first quantum-themed CTF competition ",
     meta: "Champion • Hackathon • 2026",
-    image: undefined,
+    image: quantumImg
   },
   {
     title: "CPU TrackTech",
@@ -159,7 +181,7 @@ export const achievements = [
     title: "KomsaiHack 2026",
     description: "Top 13 in a regional hackathon contest",
     meta: "Participant • Hackathon • 2026",
-    image: undefined,
+    image: komsai_tracktech,
   },
   {
     title: "Dev Summit Hack",
@@ -192,12 +214,12 @@ export const certifications = [
   {
     title: "CS50 Python",
     meta: "Certification • Harvard • 2026",
-    image: undefined,
+    image: cs50P_Img,
   },
   {
     title: "Associate Data Engineer in SQL",
     meta: "Certification • DataCamp • 2026",
-    image: undefined,
+    image: dataengImg,
   },
   {
     title: "Intermediate Git",
