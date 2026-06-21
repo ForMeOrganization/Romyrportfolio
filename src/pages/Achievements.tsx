@@ -18,16 +18,16 @@ const Achievements = () => (
             key={item.title}
             className="group min-w-[280px] flex-1 overflow-hidden rounded-2xl border border-border/80 bg-card/72 md:basis-[calc(50%-0.625rem)]"
           >
-            <div className="aspect-video overflow-hidden border-b border-border/70 bg-muted">
-              {item.image && (
+            {item.image && (
+              <div className="aspect-video overflow-hidden border-b border-border/70 bg-muted">
                 <img
                   src={item.image}
                   alt={item.title}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-              )}
-            </div>
+              </div>
+            )}
             <div className="p-6">
               <h2 className="text-2xl font-semibold text-foreground">{item.title}</h2>
               <p className="mt-3 max-w-2xl text-sm leading-7 text-muted-foreground">{item.description}</p>
