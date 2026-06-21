@@ -96,16 +96,16 @@ const Index = () => {
               className={`stagger-${index + 1} group min-w-[280px] flex-1 overflow-hidden rounded-2xl border border-border/80 bg-card/72 transition-colors hover:border-foreground/20 md:basis-[calc(50%-0.5rem)]`}
             >
               <a href={project.href} target="_blank" rel="noreferrer" className="block">
-                <div className="aspect-video overflow-hidden border-b border-border/70 bg-muted">
-                  {project.image && (
+                {project.image && (
+                  <div className="aspect-video overflow-hidden border-b border-border/70 bg-muted">
                     <img
                       src={project.image}
                       alt={project.title}
                       loading="lazy"
                       className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
-                  )}
-                </div>
+                  </div>
+                )}
                 <div className="p-5">
                   <span className="inline-flex items-center gap-2 text-lg font-semibold text-foreground">
                     {project.title}
@@ -224,16 +224,16 @@ const Index = () => {
               key={item.title}
               className={`stagger-${index + 1} group min-w-[280px] flex-1 overflow-hidden rounded-2xl border border-border/80 bg-card/72 md:basis-[calc(50%-0.5rem)]`}
             >
-              <div className="aspect-video overflow-hidden border-b border-border/70 bg-muted">
-                {item.image && (
+              {item.image && (
+                <div className="aspect-video overflow-hidden border-b border-border/70 bg-muted">
                   <img
                     src={item.image}
                     alt={item.title}
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                )}
-              </div>
+                </div>
+              )}
               <div className="p-5">
                 <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
                 <p className="mt-3 text-sm text-foreground/70">{item.meta}</p>
