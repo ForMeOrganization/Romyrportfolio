@@ -24,18 +24,18 @@ const Projects = () => (
             key={project.title}
             className="group min-w-[280px] flex-1 overflow-hidden rounded-2xl border border-border/80 bg-card/72 md:basis-[calc(50%-0.625rem)]"
           >
-            <a href={project.href} target="_blank" rel="noreferrer" className="block">
-              <div className="aspect-video overflow-hidden border-b border-border/70 bg-muted">
-                {project.image && (
+            {project.image && (
+              <a href={project.href} target="_blank" rel="noreferrer" className="block">
+                <div className="aspect-video overflow-hidden border-b border-border/70 bg-muted">
                   <img
                     src={project.image}
                     alt={project.title}
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                )}
-              </div>
-            </a>
+                </div>
+              </a>
+            )}
 
             <div className="p-6">
               <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
